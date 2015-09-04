@@ -10,10 +10,13 @@ public class test_main {
 				"11010011", "11011011", "01110111", "01111111"
 		};
 		String seed = "10000110";
-		for(int i=0;i<15;i++)
+		for(int i=0;i<a.length;i++)
 		{
 			LFSR lfsr = new LFSR(a[i],seed);
 			lfsr.testPrint();
+			System.out.println("Key: "+lfsr.keyGen(12));
 		}
+		
+		
 	}
 }
